@@ -3,7 +3,7 @@
 Private Sub GenerateURL()
 
  Dim prefix, addr As String
- prefix = "http://go/cr/"
+ prefix = "http://bigyellow.byethost8.com/"
  Dim ws As Worksheet
    For Each ws In ThisWorkbook.Worksheets
    Dim c As Range
@@ -20,7 +20,7 @@ End Sub
 ' Change the row color based on the value of cell 
 Private Sub Workbook_Open()
  Dim prefix, addr As String
- prefix = "http://go/cr/"
+ prefix = "http://bigyellow.byethost8.com/"
  Dim ws As Worksheet
    For Each ws In ThisWorkbook.Worksheets
         Dim c As Range
@@ -31,7 +31,7 @@ Private Sub Workbook_Open()
                         addr = prefix + CStr(c.Value)
                         c.Hyperlinks.Add Anchor:=c, _
                          Address:=addr, _
-                         TextToDisplay:=addr
+                         TextToDisplay:=c.Value
                     End If
                 End If
         Next c
